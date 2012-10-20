@@ -14,7 +14,7 @@ header, nav, section, article,	/* this doesn’t get set on browsers without an 
 
 html, body			{width: 100%; margin: 0; padding: 0; border: 0; color: #888;}
 html				{font: 16px/20px sans-serif; color: #333;
-				 background: #fff url("img/bg.png") fixed repeat-x top center; word-wrap: break-word;
+				 background: #f6f6f6 url("img/bg.png") fixed repeat-x top center; word-wrap: break-word;
 				 /* CSS3 gradients for browsers that support it: */
 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f6f6f6));
 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(white, #f6f6f6);
@@ -27,13 +27,12 @@ html				{font: 16px/20px sans-serif; color: #333;
 				 /* for IE6, which doesn't support PNG transparency, we won’t use a gradient background so
 				    that the fallback background colours in the PNG files compensate. (I used TweakPNG to
 				    manually insert a background colour for IE6 into the 32-bit PNGs) */
-				_background: #eee;}
+				_background: #f6f6f6;}
 body, #mast h1 a		{/* page centering / width */
 				 width: 80%; max-width: 1024px; margin: 0 auto;}
 
 h1				{margin: 0; padding: 20px 0 20px 60px;
-				 font-weight: bold; font-size: 22px; line-height: 20px; color: #f7f6f7;
-				 background: #222;}
+				 font-weight: bold; font-size: 22px; line-height: 20px; color: #f7f6f7;}
 
 p				{margin: 0; padding: 0 20px 20px;
 				 /* fonts in Linux are pretty awful, so we go for a "centruy gothic" like font for titles
@@ -70,7 +69,7 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
    ====================================================================================================================== */
 #mast h1			{position: absolute; left: 0; right: 0; height: 60px; margin: 0; padding: 0;
 				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */
-				 font-size: 32px; line-height: 40px; background: #222;}
+				 font-size: 32px; line-height: 40px; }
 #mast h1 a			{display: block; overflow: hidden; padding: 10px 0; color: #f7f6f7;}
 #mast h1 a img			{display: block; float: left; margin: 4px 13px 0 15px; border: none;}
 #mast .nnf_forum-name		{/* truncate the forum title if it overflows (not working in IE6) */
@@ -370,8 +369,7 @@ a#nnf_lock			{background: url("img/security_closed_16.png") no-repeat 0 50%; bac
 a#nnf_unlock			{background: url("img/security_open_16.png") no-repeat 0 50%; background-size: 16px 16px;}
 
 footer				{position: absolute; height: 60px; margin: 0; padding: 20px 0 0; left: 0; right: 0;
-				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */
-				 background: #222;}
+				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */}
 
 footer p			{margin: 0 auto 0 10%; font-size: .9em; color: #f7f6f7;}
 footer p a			{color: #888;}
