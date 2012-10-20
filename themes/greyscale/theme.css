@@ -84,21 +84,21 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
 				 border: none; /* very bizarely, the positioning magically adds a border in Firefox! */
 				 text-align: right; background: none;}
 #query				{display: block; /*< removes magic-spacing / height on input box */
-				 width: 180px; height: 20px; margin: 0; padding: 0 5px 0 25px; border: none;
-				 -webkit-border-radius: 10px;
-				    -moz-border-radius: 10px;
-				         border-radius: 10px;
+				 width: 180px; height: 20px; margin: 0; padding: 4px 5px 4px 25px; border: none;
+				 -webkit-border-radius: 3px;
+				    -moz-border-radius: 3px;
+				         border-radius: 3px;
 				 font-size: 12px !important;
 				 line-height: 20px; /*< equalises vertical position of search box in IE8 */
 				 background: white url("img/search.png") no-repeat 5px 50%;
-				 background-size: 13px 17px;}
+				 background-size: 13px 17px; border-bottom: 1px solid #ddd; border-top: none; box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;}
 ::-webkit-search-decoration,	/* reset Safari custom search-box design */
  ::-webkit-search-cancel-button	{display: none;}
 input[type=search]		{-webkit-appearance: textfield;
 				 -webkit-box-sizing: content-box;}
 input[type=search]:focus	{outline: none;}
 
-#go				{position: relative; margin-left: -20px; top: -20px;}
+#go				{position: relative; margin-left: -20px; top: -24px;}
 
 /* the breadcrumb for sub-forums */
 #index				{margin: 0 0 20px; padding: 0 0 0 60px; text-transform: uppercase;
