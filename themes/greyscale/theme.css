@@ -13,7 +13,7 @@ header, nav, section, article,	/* this doesn’t get set on browsers without an 
  footer				{display: block;}
 
 html, body			{width: 100%; margin: 0; padding: 0; border: 0; color: #888;}
-html				{font: 16px/20px Corbel, "URW Gothic L", "Liberation Sans", "Trebuchet MS", sans-serif;
+html				{font: 16px/20px Corbel, "URW Gothic L", "Liberation Sans", "Trebuchet MS", sans-serif; color: #333;
 				 background: #fff url("img/bg.png") fixed repeat-x top center; word-wrap: break-word;
 				 /* CSS3 gradients for browsers that support it: */
 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f6f6f6));
