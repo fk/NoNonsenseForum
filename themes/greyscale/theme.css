@@ -179,7 +179,9 @@ ol.ui li			{margin: 0; border-bottom: 1px dotted #444;
 				    (round up occurs at 2 decimal digits for Firefox and Chrome, 3 for Opera) */
 				 padding: 9.999px 20px 9px 60px; line-height: 20px;}
 
-ol.ui li.sticky			{background: #eee;}
+ol.ui li.sticky			{background: #ffc; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd), to(#ffc)); border-bottom-color: #edc; text-shadow: 0 1px 0 #fff; color: #c96;}
+ol.ui li.sticky a		{color: #631;}
+ol.ui li.sticky time		{color: #c96;}
 
 ol.ui li i			{float: left; width: 25px; margin: 0 10px 0 -50px;
 				 font-family: sans-serif; text-align: right;}
