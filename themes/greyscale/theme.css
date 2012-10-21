@@ -66,8 +66,8 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
    ====================================================================================================================== */
 #mast h1			{position: absolute; left: 0; right: 0; height: 60px; margin: 0; padding: 0;
 				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */
-				 font-size: 1em; line-height: 40px; color: #999;}
-#mast h1 a			{display: block; overflow: hidden; padding: 10px 0; color: #999; font-weight: normal;}
+				 font-size: 1em; line-height: 40px; color: #999; border-bottom: 1px solid #eee; background: #f8f8f8; text-shadow: 0 1px 0 #fff;}
+#mast h1 a			{display: block; overflow: hidden; padding: 10px 0; color: #999;}
 #mast h1 a img			{display: block; float: left; margin: 4px 13px 0 15px; border: none;}
 #mast .nnf_forum-name		{/* truncate the forum title if it overflows (not working in IE6) */
 				 display: block; height: 40px; overflow: hidden; margin-right: 220px;
@@ -76,7 +76,7 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
 #mast nav			{padding-top: 80px;}
 
 /* search box: */
-#search				{float: right; width: 210px; overflow: hidden; margin: 0; padding: 20px 10px 0;
+#search				{float: right; width: 210px; overflow: hidden; margin: 0; padding: 16px 10px 0;
 				*position: absolute; *right: 10%; /* IE6/7 have float issues with the language selector */
 				 border: none; /* very bizarely, the positioning magically adds a border in Firefox! */
 				 text-align: right; background: none;}
