@@ -195,7 +195,7 @@ ol.ui li a:hover time		{text-decoration: underline;}
 #nnf_threads h1, #nnf_post h1	{background-image: url("img/threads.png"); background-size: 32px 32px;}
 
 /* the last post name / date for sub-forums */
-#nnf_folders ol.ui li		{position: relative; border-bottom: 1px solid #444;}
+#nnf_folders ol.ui li		{position: relative; border-bottom: 1px solid #ccc;}
 .nnf_subforum-post		{*position: absolute; *right: 20px; /* IE<8 fix */}
 
 /* the lock/sticky icon positioning */
@@ -205,7 +205,7 @@ ol.ui li img			{position: absolute; margin-left: -20px; margin-top: 2px;}
 
 /* thread page
    ====================================================================================================================== */
-article				{padding: 0 20px 19px; border: 1px solid #444;
+article				{padding: 0 20px 19px; border: 1px solid #ccc;
 				 /* surreal, surreal IE6 bug. *without* a bottom-border, the layout goes out of sync */
 				 border-width: 0 1px 1px;}
 article p			{padding: 20px 0 0 0;}
@@ -247,15 +247,15 @@ article.nnf_deleted header,
  article.nnf_error header	{background: #f7f6f7; color: #aaa;}
 article.nnf_error .nnf_reply-text,
  article.nnf_error #nnf_post-text
-				{color: #d11; font-style: italic}
+				{color: #d11; font-style: italic;}
 
-article h2			{margin: 20px 0 0; border-bottom: 1px dotted #222;
+article h2			{margin: 20px 0 0; border-bottom: 1px solid #ddd;
 				 font-size: 16px; line-height: 19px; font-weight: bold; font-style: normal;}
 article .hr			{height: 1px; margin: 19px 0 0; padding: 0; overflow: hidden;
 				 border-bottom: 1px dotted #222; text-indent: -999em;}
 
 p.nnf_appended			{color: #888; padding-top: 19px;
-				 border-bottom: 1px dotted #222;
+				 border-bottom: 1px dotted #ddd;
 				 /* don’t include the 'user X added on date Y' when copy/pasting */
 				 -webkit-user-select: none;
 				    -moz-user-select: none;
@@ -282,7 +282,9 @@ p.nnf_appended			{color: #888; padding-top: 19px;
  #nnf_reply-form h1, #append h1	{background-image: url("img/new.png"); background-size: 32px 32px;}
 
 form				{position: relative; /*< for the benefit of IE6/7 whom do not have box-sizing */
-				 margin: 0; padding: 0; border: 1px solid #444; border-width: 0 1px;}
+				 margin: 0; padding: 0; border: 1px solid #ccc; border-width: 0 1px;}
+
+#nnf_new-form { background-color: #F7F6F7;}
 
 input, textarea			{font: 16px/20px sans-serif;}
 
@@ -312,13 +314,13 @@ input[type=text],
 				 /* since IE 6/7 don't support box-sizing, we can't use padding in the text-box,
 				    we'll just indent instead */
 				 padding: 0; text-indent: 20px;
-				 border: none; border-bottom: 1px dotted #444;}
+				 border: none; border-bottom: 1px dotted #ccc;}
 
 /* the "title" field, only present on the new thread form, index page */
 #ptitle				{display: table; width: 100%;}
 #ptitle label			{display: block; float: left; width: 20%; height: 39px; padding: 0; text-indent: 20px;
 				 line-height: 38.999px; /*< Chrome gets this a pixel out, use imprecision to fix */
-				 border-bottom: 1px dotted #444;}
+				 border-bottom: 1px dotted #ccc;}
 #nnf_title-field		{display: block; position: absolute; left: 20%; right: 1px; width: 80%;
 				 -webkit-box-shadow: inset 5px 0 5px -6px black;
 				    -moz-box-shadow: inset 5px 0 5px -6px black;
@@ -333,7 +335,7 @@ input[type=text],
 				 position: relative; /*< force dotted line above rightcol in Firefox */
 				 _position: static;  /*< that then breaks IE6 :P */}
 #nnf_text-field			{display: block; width: 100%; padding: 20px; margin: 0 -41px 0 0;
-				 border: none; border-right: 1px dotted #444;
+				 border: none; border-right: 1px dotted #ccc;
 				 /* fix width for browsers that allow resizable text-areas */
 				 min-width: 100%; max-width: 100%; min-height: 300px; max-height: 700px;}
 
@@ -345,7 +347,7 @@ input[type=text],
 				 margin: 0 !important; padding: 0; text-align: right;
 				 background: #444;}
 #psubmit label			{display: inline-block; padding: 0 0 0 20px;
-				 color: #f7f6f7; text-transform: uppercase;}
+				 color: #f7f6f7; font-weight: bold; }
 #submit				{vertical-align: middle;}
 
 /* delete form
@@ -367,11 +369,11 @@ a#nnf_lock, a#nnf_unlock	{margin-left: 20px; padding-left: 25px; text-transform:
 a#nnf_lock			{background: url("img/security_closed_16.png") no-repeat 0 50%; background-size: 16px 16px;}
 a#nnf_unlock			{background: url("img/security_open_16.png") no-repeat 0 50%; background-size: 16px 16px;}
 
-footer				{position: absolute; height: 60px; margin: 0; padding: 20px 0 0; left: 0; right: 0;
+footer				{position: absolute; height: 60px; margin: 0; padding: 2em 0 2em; left: 0; right: 0; text-shadow: 0 1px 0 #fff;
 				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */}
 
-footer p			{margin: 0 auto 0 10%; font-size: .9em; color: #f7f6f7;}
-footer p a			{color: #888;}
+footer p			{margin: 0 auto 0 10%; font-size: .9em; color: #999;}
+footer p a			{color: #666;}
 
 p#signin			{margin: -60px 10% 0 auto; text-align: right;}
 p#signin a			{text-transform: uppercase;}
@@ -393,7 +395,6 @@ body, #mast h1 a		{width: 95%;}
 /* header
    ---------------------------------------------------------------------------------------------------------------------- */
 /* reduce the title size */
-h1				{font-size: 20px !important;}
 #mast h1			{height: 80px; padding: 0; line-height: 20px; min-height: 40px;}
 #mast h1 a			{/* fit the logo in tighter */
 				 width: auto; margin: 0; padding: 10px 0 0 55px; text-indent: 0;}
@@ -405,15 +406,14 @@ h1				{font-size: 20px !important;}
 				 -webkit-box-sizing: border-box;
 				    -moz-box-sizing: border-box;
 				         box-sizing: border-box;
-				 border: none; text-align: right;
-				 background: #222;}
+				 border: none; text-align: right;}
 #query				{width: 100%; padding: 4px 0; text-indent: 15px; font-size: 18px;
 				 -webkit-box-sizing: padding-box;
 				    -mox-box-sizing: padding-box;
 				         box-sizing: padding-box;
-				 -webkit-border-radius: 14px;
-				    -moz-border-radius: 14px;
-				         border-radius: 14px;}
+				 -webkit-border-radius: 3px;
+				    -moz-border-radius: 3px;
+				         border-radius: 3px;}
 #go				{left: -5px; top: -23px;}
 
 #nnf_lang			{float: right; margin-top: -55px; padding-right: 0; text-align: right;}
@@ -436,8 +436,7 @@ ol.ui li b			{right: 10px;}
 ol.ui li time			{left: 40px !important; text-align: left;}
 
 ol.ui li i			{/* position the post-count closer */
-				 width: 20px !important; margin: 0 10px 0 -30px !important;
-				 font-size: 14px;}
+				 width: 20px !important; margin: 0 10px 0 -30px !important;}
 #nnf_folders ol.ui li img	{margin-left: -30px;}
 #nnf_threads ol.ui li img	{/* put the sticky icon underneath the post count instead of next to it */
 				 position: absolute; top: 35px;}
@@ -468,7 +467,7 @@ input[type="text"], textarea,	/* remove the field styling in iOS */
 
 #ptitle label, #nnf_name label, #nnf_pass label,
  #delete > form > p > label	{float: none; display: table-cell; width: 75px; height: 39px; padding: 0 0 0 20px;
-				 border-bottom: 1px dotted #444; line-height: 37px; text-indent: 0; vertical-align: middle}
+				 border-bottom: 1px dotted #444; line-height: 37px; text-indent: 0; vertical-align: middle;}
 #nnf_title-field, #nnf_name-field,
  #nnf_pass-field		{position: static; display: table-cell; width: 100%; height: 43px;
 				 -webkit-box-shadow: inset 5px 0 5px -6px black;
@@ -480,7 +479,7 @@ input[type="text"], textarea,	/* remove the field styling in iOS */
  #delete #rightcol		{width: 100%;}
 
 /* footer */
-#mods p				{padding-left: 0; padding-right: 0;
+#mods p				{padding-left: 0; padding-right: 0; text-shadow: 0 1px 0 #fff;
 				 font-size: 13px;}
 
 }
@@ -555,14 +554,14 @@ a#nnf_unlock			{background-image: url("img/security_open_32.png");}
  #nnf_admin, #mods, footer	{display: none;}
 
 /* for index page, all threads are shown except stickies */
-#nnf_threads			{margin-top: 10px; border-top: 1px solid #444;}
+#nnf_threads			{margin-top: 10px; border-top: 1px solid #ccc;}
 .nnf_thread			{display: block; border-bottom-style: solid !important;}
 
 /* for thread pages, show only the last reply */
 #nnf_replies			{margin-top: 10px;}
 .nnf_reply			{padding: 0 10px 9px;}
 .nnf_reply>header		{height: 29px; overflow: hidden; margin: -1px -10px 0; padding: 0 10px;
-				 border-top: 1px solid #444; line-height: 30px;}
+				 border-top: 1px solid #ccc; line-height: 30px;}
 .nnf_reply-text			{margin-top: -10px;}
 article.nnf_reply:last-of-type	{display: block;}
 
