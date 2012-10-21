@@ -29,15 +29,12 @@ html				{font: 14px/20px sans-serif;
 				    manually insert a background colour for IE6 into the 32-bit PNGs) */
 				_background: #f6f6f6;}
 body, #mast h1 a		{/* page centering / width */
-				 width: 80%; max-width: 1024px; margin: 0 auto;}
+				 width: 80%; max-width: 860px; margin: 0 auto;}
 
 h1				{margin: 0; padding: 20px 0 20px 60px;
-				 font-weight: bold; font-size: 22px; line-height: 20px; color: #f7f6f7;}
+				 font-weight: bold; font-size: 18px; line-height: 20px; color: #f7f6f7;}
 
-p				{margin: 0; padding: 0 20px 20px;
-				 /* fonts in Linux are pretty awful, so we go for a "centruy gothic" like font for titles
-				    and other UI ("URW Gothic L"), but a normal-looking Arial-like for the post text */
-				 font-family: sans-serif}
+p				{margin: 0; padding: 0 20px 20px; font-family: sans-serif;}
 
 a				{color: #222; text-decoration: none; font-weight: bold;}
 a:hover				{color: #666; text-decoration: underline;}
