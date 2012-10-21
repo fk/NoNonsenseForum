@@ -162,7 +162,9 @@ input[type=search]:focus	{outline: none;}
    ====================================================================================================================== */
 section				{clear: both; margin: 0 0 20px; color: #333;
 				 background: #fff; box-shadow: 0 0 6px rgba(0,0,0,0.2);}
-section h1			{background: #333 none no-repeat 15px 15px; border: 1px solid #ccc; font-weight: normal; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);}
+section h1			{background: #333 none no-repeat 15px 15px; border: 1px solid #ccc; font-weight: normal;
+				 -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+				 	 box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);}
 
 /* page list */
 section nav			{position: relative; height: 40px; padding: 0;
@@ -170,14 +172,14 @@ section nav			{position: relative; height: 40px; padding: 0;
 				 text-align: right; text-transform: uppercase; color: #aaa;
 				 background-color: #444;}
 				 
-section > ol + nav {color: #999; font-family: sans-serif; text-shadow: 0 1px 0 #fff; border: 1px solid #ccc;
-					 				 /* CSS3 gradients for browsers that support it: */
-					 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));
-					 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#fafafa, #f3f3f3);
-					 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#fafafa, #f3f3f3);
-					 	/* IE10 */		 background-image:     -ms-linear-gradient(#fafafa, #f3f3f3);
-					 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#fafafa, #f3f3f3);
-					 	/* future! */		 background-image:         linear-gradient(#fafafa, #f3f3f3);
+section > ol + nav 		{color: #999; font-family: sans-serif; text-shadow: 0 1px 0 #fff; border: 1px solid #ccc;
+ 				 /* CSS3 gradients for browsers that support it: */
+ 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));
+ 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#fafafa, #f3f3f3);
+ 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#fafafa, #f3f3f3);
+ 	/* IE10 */		 background-image:     -ms-linear-gradient(#fafafa, #f3f3f3);
+ 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#fafafa, #f3f3f3);
+ 	/* future! */		 background-image:         linear-gradient(#fafafa, #f3f3f3);
 
 }
 
@@ -192,28 +194,31 @@ ol.nnf_pages			{display: block; float: right; margin: 0 0 0 10px; padding: 0;}
 ol.nnf_pages li			{display: block; float: left; margin: 0 0 0 4px; padding: 0; width: 40px; height: 40px;
 				 text-align: center;}
 
-
-				 ol.nnf_pages a			{ border-radius:3px; display: block; width: 40px; height: 40px;
-				 				 color: #aaa; text-decoration: none;}
-				 ol.nnf_pages a:hover		{ color: #fff; font-style: normal; background: #666;  /* CSS3 gradients for browsers that support it: */ }
-				 ol.nnf_pages em			{  border-radius:3px; display: block; height: 40px; font-style: normal; color: #999; background: #222; box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666; text-shadow: 0 1px 0 rgba(0,0,0,0.2);}
-
+ ol.nnf_pages a			{border-radius:3px; display: block; width: 40px; height: 40px;
+ 				 color: #aaa; text-decoration: none;}
+ ol.nnf_pages a:hover		{color: #fff; font-style: normal; background: #666;}
+ ol.nnf_pages em		{border-radius: 3px; display: block; height: 40px; font-style: normal; color: #999;
+	 			 background: #222;
+				 box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+				 text-shadow: 0 1px 0 rgba(0,0,0,0.2);}
 
 section > ol + nav ol.nnf_pages li,
-section article + nav ol.nnf_pages li {
-	margin-left: 0;}
-				 section > ol + nav ol.nnf_pages a,
-				 section article + nav ol.nnf_pages a {border-radius:0px;}
+section article + nav ol.nnf_pages li {margin-left: 0;}
+
+section > ol + nav ol.nnf_pages a,
+section article + nav ol.nnf_pages a {border-radius:0px;}
+
 section > ol + nav ol.nnf_pages a:hover,
-section article + nav ol.nnf_pages a:hover		{ color: #333; font-style: normal; background: #eee;  /* CSS3 gradients for browsers that support it: */
-					 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#dedede));
-					 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#f0f0f0, #dedede);
-					 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#f0f0f0, #dedede);
-					 	/* IE10 */		 background-image:     -ms-linear-gradient(#f0f0f0, #dedede);
-					 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#f0f0f0, #dedede);
-					 	/* future! */		 background-image:         linear-gradient(#f0f0f0, #dedede);}
+section article + nav ol.nnf_pages a:hover{ color: #333; font-style: normal; background: #eee; 
+				/* CSS3 gradients for browsers that support it: */
+ 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#dedede));
+ 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#f0f0f0, #dedede);
+ 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#f0f0f0, #dedede);
+ 	/* IE10 */		 background-image:     -ms-linear-gradient(#f0f0f0, #dedede);
+ 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#f0f0f0, #dedede);
+ 	/* future! */		 background-image:         linear-gradient(#f0f0f0, #dedede);}
 section > ol + nav ol.nnf_pages em,
-section article + nav ol.nnf_pages em			{ border-radius:0px;  display: block; height: 40px; font-style: normal; color: #555; background: #ddd; box-shadow: inset 0 4px 4px rgba(0,0,0,.2); text-shadow: 0 1px 0 #fff;}
+section article + nav ol.nnf_pages em	{ border-radius:0px;  display: block; height: 40px; font-style: normal; color: #555; background: #ddd; box-shadow: inset 0 4px 4px rgba(0,0,0,.2); text-shadow: 0 1px 0 #fff;}
 
 /* item list (folders / threads) */
 ol.ui				{margin: 0; padding: 0; border: 1px solid #ccc; border-width: 0 1px;}
@@ -224,10 +229,6 @@ ol.ui li			{margin: 0; border-bottom: 1px solid #eee;
 				    (round up occurs at 2 decimal digits for Firefox and Chrome, 3 for Opera) */
 				 padding: 9.999px 20px 9px 60px; line-height: 20px;}
 
-ol.ui li.sticky			{background: #ffc; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe), to(#ffd)); border-bottom-color: #edc; text-shadow: 0 1px 0 #fff; color: #c96;}
-ol.ui li.sticky a		{color: #631;}
-ol.ui li.sticky time		{color: #c96;}
-
 ol.ui li i			{float: left; width: 25px; margin: 0 10px 0 -50px;
 				 font-family: sans-serif; text-align: right;}
 
@@ -235,6 +236,20 @@ ol.ui li b			{float: right; padding-left: 10px; text-align: right;}	/* author */
 ol.ui li time			{float: right; width: 9.1em;				/* timestamp */
 				 font-weight: normal; text-align: right; color: #888;}
 ol.ui li a:hover time		{text-decoration: underline;}
+
+ol.ui li.sticky			{background: #ffc; border-bottom-color: #edc; color: #c96;
+				 text-shadow: 0 1px 0 #fff; 
+				/* CSS3 gradients for browsers that support it: */
+	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe), to(#ffd));
+	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#ffe, #ffd);
+	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#ffe, #ffd);
+	/* IE10 */		 background-image:     -ms-linear-gradient(#ffe, #ffd);
+	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#ffe, #ffd);
+	/* future! */		 background-image:         linear-gradient(#ffe, #ffd);}
+
+ol.ui li.sticky a		{color: #631;}
+ol.ui li.sticky time		{color: #c96;}
+
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
 
@@ -285,26 +300,23 @@ article header .ui,
 a.delete			{background: url("img/delete.png") no-repeat right center; background-size: 16px 16px;}
 a.append			{background: url("img/add.png") no-repeat right center; background-size: 16px 16px;}
 
-a.delete,
-a.append {
-	opacity: 0.5;
-}
+a.delete,a.append 		{opacity: 0.5;}
 
-a.delete:hover,
-a.append:hover {
-	opacity: 1;
-}
+a.delete:hover,a.append:hover	{opacity: 1;}
 
 article.nnf_op			{}
-article header		{color: #999; text-shadow: 0 1px 0 #fff; border-bottom: 1px solid #eee; border-top: 1px solid #eee; background-color: #f3f3f3; background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));}
-article.nnf_op  header {color: #666; background-color: #eee; background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f3f3f3));}
+article header			{color: #999; text-shadow: 0 1px 0 #fff; border-bottom: 1px solid #eee; border-top: 1px solid #eee;
+				 background-color: #f3f3f3;
+				 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));}
+article.nnf_op  header 		{color: #666; background-color: #eee;
+				 background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f3f3f3));}
 
-.nnf_reply-number {position:relative;}
-.nnf_reply-number:after {position:absolute; width: 0; height:0; content:""; border-left: 6px solid transparent;
-	border-right: 6px solid transparent; border-bottom: 6px solid #fff;left: 0; bottom: -12px;margin-left:-3px; z-index:1;}
-.nnf_reply-number:before {position:absolute; width: 0; height:0; content:""; border-left: 7px solid transparent;
-	border-right: 7px solid transparent; border-bottom: 7px solid #ddd;left: 0; bottom: -12px;margin-left:-4px;}
-
+.nnf_reply-number 		{position: relative;}
+.nnf_reply-number:after 	{position: absolute; width: 0; height: 0; content: ""; border-left: 6px solid transparent;
+				 border-right: 6px solid transparent; border-bottom: 6px solid #fff;
+				 left: 0; bottom: -12px; margin-left: -3px; z-index: 1;}
+.nnf_reply-number:before 	{position: absolute; width: 0; height: 0; content: ""; border-left: 7px solid transparent;
+				 border-right: 7px solid transparent; border-bottom: 7px solid #ddd; left: 0; bottom: -12px; margin-left: -4px;}
 
 article.nnf_deleted		{color: #aaa;}
 article.nnf_deleted header,
@@ -348,7 +360,7 @@ p.nnf_appended			{color: #888; padding-top: 19px;
 form				{position: relative; /*< for the benefit of IE6/7 whom do not have box-sizing */
 				 margin: 0; padding: 0; border: 1px solid #ccc; border-width: 0 1px;}
 
-#nnf_new-form { background-color: #F7F6F7;}
+#nnf_new-form 			{background-color: #F7F6F7;}
 
 input, textarea			{font: 16px/20px sans-serif;}
 
