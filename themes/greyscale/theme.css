@@ -89,7 +89,8 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
 				 font-size: 12px !important;
 				 line-height: 20px; /*< equalises vertical position of search box in IE8 */
 				 background: white url("img/search.png") no-repeat 5px 50%;
-				 background-size: 13px 17px; border-bottom: 1px solid #ddd; border-top: none; box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;}
+				 background-size: 13px 17px; border-bottom: 1px solid #ddd; border-top: none;
+				 box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;}
 ::-webkit-search-decoration,	/* reset Safari custom search-box design */
  ::-webkit-search-cancel-button	{display: none;}
 input[type=search]		{-webkit-appearance: textfield;
