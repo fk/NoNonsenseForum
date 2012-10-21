@@ -66,7 +66,8 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
    ====================================================================================================================== */
 #mast h1			{position: absolute; left: 0; right: 0; height: 60px; margin: 0; padding: 0;
 				 _width: 125%; /*< IE6 has to override the 80% with a reverse %'age gain */
-				 font-size: 1em; line-height: 40px; color: #999; border-bottom: 1px solid #eee; background: #f8f8f8; text-shadow: 0 1px 0 #fff;}
+				 font-size: 1em; line-height: 40px; color: #999; text-shadow: 0 1px 0 #fff;
+				 border-bottom: 1px solid #eee; background: #f8f8f8;}
 #mast h1 a			{display: block; overflow: hidden; padding: 10px 0; color: #999;}
 #mast h1 a img			{display: block; float: left; margin: 4px 13px 0 15px; border: none;}
 #mast .nnf_forum-name		{/* truncate the forum title if it overflows (not working in IE6) */
