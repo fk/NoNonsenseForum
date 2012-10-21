@@ -149,15 +149,26 @@ input[type=search]:focus	{outline: none;}
 
 /* index page
    ====================================================================================================================== */
-section				{clear: both; margin: 0 0 20px; color: #222;
-				 background: #f7f6f7;}
-section h1			{background: #222 none no-repeat 15px 15px;}
+section				{clear: both; margin: 0 0 20px; color: #333;
+				 background: #fff; box-shadow: 0 0 6px rgba(0,0,0,0.2);}
+section h1			{background: #333 none no-repeat 15px 15px; border: 1px solid #ccc; font-weight: normal; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);}
 
 /* page list */
-section nav			{position: relative; height: 40px; overflow: hidden; padding: 0 1px;
+section nav			{position: relative; height: 40px; padding: 0;
 				 font-family: sans-serif; line-height: 40px;
 				 text-align: right; text-transform: uppercase; color: #aaa;
 				 background-color: #444;}
+				 
+section > ol + nav {color: #999; font-family: sans-serif; text-shadow: 0 1px 0 #fff; border: 1px solid #ccc;
+					 				 /* CSS3 gradients for browsers that support it: */
+					 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));
+					 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#fafafa, #f3f3f3);
+					 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#fafafa, #f3f3f3);
+					 	/* IE10 */		 background-image:     -ms-linear-gradient(#fafafa, #f3f3f3);
+					 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#fafafa, #f3f3f3);
+					 	/* future! */		 background-image:         linear-gradient(#fafafa, #f3f3f3);
+
+}
 
 /* cover over the dotted line at the bottom */
 #nnf_threads nav		{margin-top: -1px;}
@@ -167,23 +178,42 @@ section nav			{position: relative; height: 40px; overflow: hidden; padding: 0 1p
 section>h1 + nav		{background: none; float: right; margin-top: -50px !important; padding-right: 10px;}
 
 ol.nnf_pages			{display: block; float: right; margin: 0 0 0 10px; padding: 0;}
-ol.nnf_pages li			{display: block; float: left; margin: 0; padding: 0; width: 40px; height: 39px;
+ol.nnf_pages li			{display: block; float: left; margin: 0 0 0 4px; padding: 0; width: 40px; height: 40px;
 				 text-align: center;}
-ol.nnf_pages a			{display: block; width: 40px; height: 39px;
-				 color: #aaa; text-decoration: none;}
-ol.nnf_pages a:hover		{color: white; font-style: normal; background-color: #888;}
-ol.nnf_pages em			{display: block; height: 39px; font-style: normal; color: white; background: #888;}
+
+
+				 ol.nnf_pages a			{ border-radius:3px; display: block; width: 40px; height: 40px;
+				 				 color: #aaa; text-decoration: none;}
+				 ol.nnf_pages a:hover		{ color: #fff; font-style: normal; background: #666;  /* CSS3 gradients for browsers that support it: */ }
+				 ol.nnf_pages em			{  border-radius:3px; display: block; height: 40px; font-style: normal; color: #999; background: #222; box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666; text-shadow: 0 1px 0 rgba(0,0,0,0.2);}
+
+
+section > ol + nav ol.nnf_pages li,
+section article + nav ol.nnf_pages li {
+	margin-left: 0;}
+				 section > ol + nav ol.nnf_pages a,
+				 section article + nav ol.nnf_pages a {border-radius:0px;}
+section > ol + nav ol.nnf_pages a:hover,
+section article + nav ol.nnf_pages a:hover		{ color: #333; font-style: normal; background: #eee;  /* CSS3 gradients for browsers that support it: */
+					 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#dedede));
+					 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#f0f0f0, #dedede);
+					 	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#f0f0f0, #dedede);
+					 	/* IE10 */		 background-image:     -ms-linear-gradient(#f0f0f0, #dedede);
+					 	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#f0f0f0, #dedede);
+					 	/* future! */		 background-image:         linear-gradient(#f0f0f0, #dedede);}
+section > ol + nav ol.nnf_pages em,
+section article + nav ol.nnf_pages em			{ border-radius:0px;  display: block; height: 40px; font-style: normal; color: #555; background: #ddd; box-shadow: inset 0 4px 4px rgba(0,0,0,.2); text-shadow: 0 1px 0 #fff;}
 
 /* item list (folders / threads) */
-ol.ui				{margin: 0; padding: 0; border: 1px solid #444; border-width: 0 1px;}
-ol.ui li			{margin: 0; border-bottom: 1px dotted #444;
+ol.ui				{margin: 0; padding: 0; border: 1px solid #ccc; border-width: 0 1px;}
+ol.ui li			{margin: 0; border-bottom: 1px solid #eee;
 				 list-style-type: none; color: #888;
 				 /* this trick ensures that one line of text is 19px+border (20px), but that each additonal
 				    line of text is 20px so that the bottom border never shifts out of place
 				    (round up occurs at 2 decimal digits for Firefox and Chrome, 3 for Opera) */
 				 padding: 9.999px 20px 9px 60px; line-height: 20px;}
 
-ol.ui li.sticky			{background: #ffc; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd), to(#ffc)); border-bottom-color: #edc; text-shadow: 0 1px 0 #fff; color: #c96;}
+ol.ui li.sticky			{background: #ffc; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe), to(#ffd)); border-bottom-color: #edc; text-shadow: 0 1px 0 #fff; color: #c96;}
 ol.ui li.sticky a		{color: #631;}
 ol.ui li.sticky time		{color: #c96;}
 
