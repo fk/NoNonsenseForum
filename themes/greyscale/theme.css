@@ -111,18 +111,26 @@ input[type=search]:focus	{outline: none;}
 #nnf_lang img			{vertical-align: middle;}
 #nnf_lang input			{vertical-align: bottom;}
 
-#nnf_lang img, #nnf_lang input[type=image]{
-	opacity: 0.5; -webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s;
-}
+#nnf_lang img,
+#nnf_lang input[type=image]	{opacity: 0.5;
+				 -webkit-transition: all .2s;
+				    -moz-transition: all .2s;
+				      -o-transition: all .2s;
+				 	 transition: all .2s;}
+
 #nnf_lang:hover img, #nnf_lang:hover input[type=image] {opacity: 1;}
 
 /* the admin's custom header message, 'about.html' */
 #nnf_about			{margin-bottom: 0; background: none; border: 0; box-shadow: none;}
 
 /* the access warning message that appears on locked forums / threads */
-#info a				{color: #666; font-weight: normal; opacity: 0.5; text-transform: none; text-shadow: 0 1px 0 #fff;
-							-webkit-transition: all .2s; -moz-transition: all .2s; -o-transition: all .2s; transition: all .2s;}
-#info a:hover	{opacity: 1;}
+#info a				{color: #666; font-weight: normal; opacity: 0.5; text-transform: none;
+				 text-shadow: 0 1px 0 #fff;
+				 -webkit-transition: all .2s;
+				    -moz-transition: all .2s;
+				      -o-transition: all .2s;
+				 	 transition: all .2s;}
+#info a:hover			{opacity: 1;}
 
 /* 'Add' / 'Reply' and 'RSS' buttons */
 #nnf_add, #nnf_reply, #nnf_rss	{float: right; margin-left: 20px; padding-left: 25px;
