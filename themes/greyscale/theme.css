@@ -13,8 +13,8 @@ header, nav, section, article,	/* this doesn’t get set on browsers without an 
  footer				{display: block;}
 
 html, body			{width: 100%; margin: 0; padding: 0; border: 0; color: #888;}
-html				{font: 14px/20px sans-serif;
-				 background: #f6f6f6 url("img/bg.png") fixed repeat-x top center; word-wrap: break-word;
+html				{font: 14px/20px sans-serif; word-wrap: break-word;
+				 background: #f6f6f6 url("img/bg.png") fixed repeat-x top center;
 				 /* CSS3 gradients for browsers that support it: */
 	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f6f6f6));
 	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(white, #f6f6f6);
@@ -91,6 +91,7 @@ pre, code, samp			{font: 12.5px/20px Monaco, Consolas, "Liberation Mono", monosp
 				 background: white url("img/search.png") no-repeat 5px 50%;
 				 background-size: 13px 17px; border-bottom: 1px solid #ddd; border-top: none;
 				 -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;
+				    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;
 				 	 box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #fff, 0 1px 0 #fff;}
 ::-webkit-search-decoration,	/* reset Safari custom search-box design */
  ::-webkit-search-cancel-button	{display: none;}
@@ -160,10 +161,13 @@ input[type=search]:focus	{outline: none;}
 
 /* index page
    ====================================================================================================================== */
-section				{clear: both; margin: 0 0 20px; color: #333;
-				 background: #fff; box-shadow: 0 0 6px rgba(0,0,0,0.2);}
+section				{clear: both; margin: 0 0 20px; color: #333; background: #fff;
+				 -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+				    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+				    	 box-shadow: 0 0 6px rgba(0,0,0,0.2);}
 section h1			{background: #333 none no-repeat 15px 15px; border: 1px solid #ccc; font-weight: normal;
 				 -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+				    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
 				 	 box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);}
 
 /* page list */
@@ -180,7 +184,6 @@ section > ol + nav 		{color: #999; font-family: sans-serif; text-shadow: 0 1px 0
  	/* IE10 */		 background-image:     -ms-linear-gradient(#fafafa, #f3f3f3);
  	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#fafafa, #f3f3f3);
  	/* future! */		 background-image:         linear-gradient(#fafafa, #f3f3f3);
-
 }
 
 /* cover over the dotted line at the bottom */
@@ -199,7 +202,9 @@ ol.nnf_pages li			{display: block; float: left; margin: 0 0 0 4px; padding: 0; w
  ol.nnf_pages a:hover		{color: #fff; font-style: normal; background: #666;}
  ol.nnf_pages em		{border-radius: 3px; display: block; height: 40px; font-style: normal; color: #999;
 	 			 background: #222;
-				 box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+				 -webkit-box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+				    -moz-box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+				         box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
 				 text-shadow: 0 1px 0 rgba(0,0,0,0.2);}
 
 section > ol + nav ol.nnf_pages li,
@@ -218,7 +223,12 @@ section article + nav ol.nnf_pages a:hover{ color: #333; font-style: normal; bac
  	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#f0f0f0, #dedede);
  	/* future! */		 background-image:         linear-gradient(#f0f0f0, #dedede);}
 section > ol + nav ol.nnf_pages em,
-section article + nav ol.nnf_pages em	{ border-radius:0px;  display: block; height: 40px; font-style: normal; color: #555; background: #ddd; box-shadow: inset 0 4px 4px rgba(0,0,0,.2); text-shadow: 0 1px 0 #fff;}
+section article + nav ol.nnf_pages em	{border-radius:0px; display: block; height: 40px;
+					 font-style: normal; color: #555; background: #ddd;
+					 -webkit-box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+					    -moz-box-shadow: inset 0 4px 4px rgba(0,0,0,1), 0 1px 0 #666;
+					         box-shadow: inset 0 4px 4px rgba(0,0,0,.2);
+					 text-shadow: 0 1px 0 #fff;}
 
 /* item list (folders / threads) */
 ol.ui				{margin: 0; padding: 0; border: 1px solid #ccc; border-width: 0 1px;}
@@ -307,9 +317,22 @@ a.delete:hover,a.append:hover	{opacity: 1;}
 article.nnf_op			{}
 article header			{color: #999; text-shadow: 0 1px 0 #fff; border-bottom: 1px solid #eee; border-top: 1px solid #eee;
 				 background-color: #f3f3f3;
-				 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));}
+				 /* CSS3 gradients for browsers that support it: */
+	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));
+	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#fafafa, #f3f3f3);
+	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#fafafa, #f3f3f3);
+	/* IE10 */		 background-image:     -ms-linear-gradient(#fafafa, #f3f3f3);
+	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#fafafa, #f3f3f3);
+	/* future! */		 background-image:         linear-gradient(#fafafa, #f3f3f3);}
+
 article.nnf_op  header 		{color: #666; background-color: #eee;
-				 background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f3f3f3));}
+				 /* CSS3 gradients for browsers that support it: */
+	/* Chrome / Safari */	 background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f3f3f3));
+	/* Chrome10+ Saf5+ */	 background-image: -webkit-linear-gradient(#eee, #f3f3f3);
+	/* FF3.6+ */		 background-image:    -moz-linear-gradient(#eee, #f3f3f3);
+	/* IE10 */		 background-image:     -ms-linear-gradient(#eee, #f3f3f3);
+	/* Opera 11.10+ */	 background-image:      -o-linear-gradient(#eee, #f3f3f3);
+	/* future! */		 background-image:         linear-gradient(#eee, #f3f3f3);}
 
 .nnf_reply-number 		{position: relative;}
 .nnf_reply-number:after 	{position: absolute; width: 0; height: 0; content: ""; border-left: 6px solid transparent;
